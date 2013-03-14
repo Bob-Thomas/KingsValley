@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy element &apos;libgdx.png&apos; to &apos;bob-blok3-kingsvalley-desktop/assets/data&apos;&#x0D;&#x0A;- Original project: &apos;bob-blok3-kingsvalley-android&apos;&#x0D;&#x0A;- Destination element: &apos;bob-blok3-kingsvalley-desktop/assets/data&apos;&#x0D;&#x0A;- Original element: &apos;libgdx.png&apos;" description="Copy file" destination="=bob-blok3-kingsvalley-desktop/assets&lt;data" element1="assets/data/libgdx.png" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1362669235544" units="0" version="1.0"/>
+</session>

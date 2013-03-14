@@ -1,0 +1,2 @@
+# Module nl.bob.KingsvalleyGame.GwtDefinition
+# RPC service class, partial path of RPC policy file
