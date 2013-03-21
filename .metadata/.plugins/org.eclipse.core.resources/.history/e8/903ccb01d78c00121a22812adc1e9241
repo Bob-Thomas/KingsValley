@@ -1,0 +1,45 @@
+package AnimatingSprite;
+
+import explorer.Explorer;
+
+public class AnimatedSprite {
+//fields
+	private Explorer explorer;
+	private float timer;
+	private int[] xValue = {0, 18, 36,54,72,90,108,126 };
+	protected boolean flipx;
+	protected int i;
+	//constructor
+	public AnimatedSprite(Explorer explorer){
+		this.explorer = explorer;
+	}
+	
+	public void Update(float delta){
+		this.timer += 0.1f;
+        if (this.timer > 1f /2f)
+        {
+            this.timer = 0;
+            this.i++;
+            if (this.i > 3)
+            {
+                this.i = 0;
+            }
+        }
+		
+	}
+	
+	public void Draw(float delta){
+		
+		this.explorer.getGame().getSpriteBatch().draw( this.explorer.getText()
+				,this.explorer.getPosition().x
+				,this.explorer.getPosition().y
+				,this.explorer.getText().getWidth()/8
+				,this.explorer.getText().getHeight()
+				,this.xValue[this.i]
+				,0
+				,18
+				,32
+				,flipx
+				,false);
+	}
+}

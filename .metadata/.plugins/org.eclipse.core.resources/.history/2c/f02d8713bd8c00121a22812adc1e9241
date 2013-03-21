@@ -1,0 +1,23 @@
+package explorer;
+
+import AnimatingSprite.AnimatedSprite;
+
+public class ExplorerMovement extends AnimatedSprite {
+	private Explorer explorer;
+	public ExplorerMovement(Explorer explorer)
+	{
+		super(explorer);
+		this.explorer = explorer;
+	}
+	
+	
+	
+	public void Update(float delta){
+		this.MoveRight();
+	}
+	
+	public void MoveRight()
+	{
+		this.explorer.getPosition().x += this.explorer.getSpeed();
+	}
+}

@@ -1,0 +1,62 @@
+package explorer;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Vector2;
+
+import nl.bob.KingsvalleyGame.KingsValley;
+
+public class Explorer  {
+	
+	//fields
+	private KingsValley game;
+	private ExplorerMovement move;
+	private Vector2 position;
+	private float speed;
+	private Texture text;
+	
+	//properties
+	public Vector2 getPosition() {
+		return position;
+	}
+
+	public void setPosition(Vector2 position) {
+		this.position = position;
+	}
+
+	
+	//properties
+	
+	//constructor
+	public Explorer(KingsValley game,Vector2 position,float speed)
+	{
+		this.game = game;
+		this.position = position;
+		this.speed = speed;
+		this.move = new ExplorerMovement(this);
+		this.text = new Texture("data/explorer.png");
+	}
+	
+	//update
+	public void Update(float delta)
+	{
+		this.move.Update(delta);
+	}
+	
+	
+	//draw
+	public void Draw(float delta)
+	{
+		this.game.getSpriteBatch().draw( this.text
+										,this.position.x
+										,this.position.y
+										,this.text.getWidth()/8
+										,this.text.getHeight()
+										,0
+										,0
+										,18
+										,32
+										,false
+										,false);
+	}
+
+}

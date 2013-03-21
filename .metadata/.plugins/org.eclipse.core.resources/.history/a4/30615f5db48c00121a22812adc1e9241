@@ -1,0 +1,33 @@
+package explorer;
+
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.math.Vector2;
+
+import nl.bob.KingsvalleyGame.KingsValley;
+
+public class Explorer  {
+	
+	//fields
+	private KingsValley game;
+	private Vector2 position;
+	private float speed;
+	private Texture text;
+	
+	//properties
+	
+	//constructor
+	public Explorer(KingsValley game,Vector2 position,float speed)
+	{
+		this.game = game;
+		this.position = position;
+		this.speed = speed;
+		this.text = new Texture("data/explorer.png");
+	}
+	
+	//update
+	
+	
+	
+	//draw
+
+}

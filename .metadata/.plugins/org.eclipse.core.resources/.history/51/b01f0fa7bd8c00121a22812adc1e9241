@@ -1,0 +1,20 @@
+package AnimatingSprite;
+
+import explorer.Explorer;
+
+public class AnimatedSprite {
+//fields
+	private Explorer explorer;
+	//constructor
+	public AnimatedSprite(Explorer explorer){
+		this.explorer = explorer;
+	}
+	
+	public void update(float delta){
+		
+	}
+	
+	public void Draw (float delta){
+		
+	}
+}

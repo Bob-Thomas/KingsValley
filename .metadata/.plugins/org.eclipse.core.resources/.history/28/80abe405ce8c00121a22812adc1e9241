@@ -1,0 +1,32 @@
+package AnimatingSprite;
+
+import explorer.Explorer;
+
+public class AnimatedSprite {
+//fields
+	private Explorer explorer;
+	private int[] xValue = { 0, 32, 64, 96 };
+	//constructor
+	public AnimatedSprite(Explorer explorer){
+		this.explorer = explorer;
+	}
+	
+	public void update(float delta){
+		
+	}
+	
+	public void Draw (float delta){
+		
+		this.explorer.getGame().getSpriteBatch().draw( this.explorer.getText()
+				,this.explorer.getPosition().x
+				,this.explorer.getPosition().y
+				,this.explorer.getText().getWidth()/8
+				,this.explorer.getText().getHeight()
+				,0
+				,0
+				,18
+				,32
+				,false
+				,false);
+	}
+}

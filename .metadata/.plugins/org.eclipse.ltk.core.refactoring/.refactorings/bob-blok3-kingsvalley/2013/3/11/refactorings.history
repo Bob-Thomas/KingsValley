@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Encapsulate field &apos;nl.bob.KingsvalleyGame.KingsValley.spriteBatch&apos; in &apos;nl.bob.KingsvalleyGame.KingsValley&apos;&#x0D;&#x0A;- Original project: &apos;bob-blok3-kingsvalley&apos;&#x0D;&#x0A;- Original element: &apos;nl.bob.KingsvalleyGame.KingsValley.spriteBatch&apos;&#x0D;&#x0A;- Getter method name: &apos;getSpriteBatch&apos;&#x0D;&#x0A;- Setter method name: &apos;setSpriteBatch&apos;&#x0D;&#x0A;- Field visibility: &apos;public&apos;&#x0D;&#x0A;- Use getter and setter methods in declaring type" comments="false" declaring="true" description="Encapsulate field &apos;spriteBatch&apos;" flags="589830" getter="getSpriteBatch" id="org.eclipse.jdt.ui.self.encapsulate" input="/src&lt;nl.bob.KingsvalleyGame{KingsValley.java[KingsValley^spriteBatch" insertion="-1" setter="setSpriteBatch" stamp="1363270464725" version="1.0" visibility="1"/>
+</session>

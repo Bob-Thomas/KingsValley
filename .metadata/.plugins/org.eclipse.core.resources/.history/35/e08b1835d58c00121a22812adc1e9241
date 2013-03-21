@@ -1,0 +1,39 @@
+package explorer;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input.Keys;
+
+import AnimatingSprite.AnimatedSprite;
+
+public class ExplorerMovement extends AnimatedSprite {
+	private Explorer explorer;
+	public ExplorerMovement(Explorer explorer)
+	{
+		super(explorer);
+		this.explorer = explorer;
+	}
+	
+	
+	
+	public void Update(float delta){
+		if(Gdx.input.isKeyPressed(Keys.D)){
+			this.MoveRight();
+		}
+		else if(Gdx.input.isKeyPressed(Keys.A)){
+		
+			this.MoveLeft();
+		}
+		super.update(delta);
+		
+	}
+	
+	public void MoveRight()
+	{
+		this.explorer.getPosition().x += this.explorer.getSpeed();
+	}
+	public void MoveLeft()
+	{
+		this.explorer.getPosition().x -= this.explorer.getSpeed();
+	}
+	
+}
