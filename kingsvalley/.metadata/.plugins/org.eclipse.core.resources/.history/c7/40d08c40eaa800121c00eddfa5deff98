@@ -1,0 +1,9 @@
+package Bricks;
+
+import image.Image;
+
+public class Bricks extends Image {
+	
+
+
+}

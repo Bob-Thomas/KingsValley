@@ -1,0 +1,37 @@
+package level;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+
+import nl.am1a.kingsvalley1.KingsValley;
+
+public class Level {
+	
+	private KingsValley game;
+	private String levelPath;
+	private int levelIndex;
+	private ArrayList<String> lines;
+	
+	
+	public Level(KingsValley game, int levelIndex){
+		
+		this.game = game;
+		this.levelIndex = levelIndex;
+		this.levelPath = String.format("data/%s.txt", levelIndex);
+		
+		
+	}
+	
+	private void LoadAssets() throws IOException{
+		this.lines = new ArrayList<String>();
+		FileHandle handle = Gdx.files.internal(this.levelPath);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(handle.read()));
+		String line = reader.readLine();
+		Gdx.app.log("line", line);
+	}
+}

@@ -1,0 +1,17 @@
+package level;
+
+import nl.am1a.kingsvalley1.KingsValley;
+
+public class Level {
+	
+	private KingsValley game;
+	private String levelPath;
+	
+	
+	public Level(KingsValley game, int levelIndex){
+		
+		this.game = game;
+		this.levelPath = String.format("data/%s.txt", levelIndex);
+		
+	}
+}

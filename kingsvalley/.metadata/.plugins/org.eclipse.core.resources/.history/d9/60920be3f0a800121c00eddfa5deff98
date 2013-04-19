@@ -1,0 +1,63 @@
+package level;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
+
+import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.files.FileHandle;
+import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
+
+import nl.am1a.kingsvalley1.KingsValley;
+
+public class Level {
+	
+	private KingsValley game;
+	private String levelPath;
+	private int levelIndex;
+	private float height = 0;
+	private float width = 0;
+	private Texture spriteSheet;
+	private Map<String, TextureRegion> region;
+	private ArrayList<String> lines;
+	private ArrayList<String> bricks;
+	private ArrayList<String> stairs;
+	private ArrayList<String> mummy;
+	
+	
+	public Level(KingsValley game, int levelIndex){
+		
+		this.game = game;
+		this.levelIndex = levelIndex;
+		this.levelPath = String.format("data/%s.txt", levelIndex);
+		try {
+			this.LoadAssets();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+	}
+	
+	private void LoadAssets() throws IOException{
+		
+		this.spriteSheet = new Texture("data/spriteSheet.png");
+		this.region = new HashMap<String,TextureRegion>();
+		this.region.put("brick", new TextureRegion(this.spriteSheet,0,0,16,16));
+		this.region.put("fundament", new TextureRegion(this.spriteSheet,32,0,16,16));
+		this.lines = new ArrayList<String>();
+		FileHandle handle = Gdx.files.internal(this.levelPath);
+		BufferedReader reader = new BufferedReader(new InputStreamReader(handle.read()));
+		String line = reader.readLine();
+		while(line != null){
+			lines.add(line);
+			line = reader.readLine();
+			Gdx.app.log("line", line);
+		}
+		this.height = this.lines.size();
+	}
+}

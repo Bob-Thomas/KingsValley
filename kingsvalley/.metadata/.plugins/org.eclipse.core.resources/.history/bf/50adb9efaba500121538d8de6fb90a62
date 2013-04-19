@@ -1,0 +1,25 @@
+package level;
+
+import java.util.ArrayList;
+
+import nl.am1a.kingsvalley1.KingsValley;
+
+public class Level {
+	
+	private KingsValley game;
+	private String levelPath;
+	private ArrayList<String> lines;
+	
+	
+	public Level(KingsValley game, int levelIndex){
+		
+		this.game = game;
+		this.levelPath = String.format("data/%s.txt", levelIndex);
+		
+		
+	}
+	
+	private void LoadAssets(){
+		this.lines = new ArrayList<String>();
+	}
+}
